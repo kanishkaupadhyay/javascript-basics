@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 12</title>
+</head>
+<body>
+    <h1>Open Console on your Browser --> CTRL + SHIFT + i</h1>
+    <script>
+        // String Data Type
+        {   // primitive
+            let name = "Kanishka";
+            // object
+            let myName = new String("Kanishka"); 
+            // string formatting
+            console.log(`My name is ${name}!`);
+            // string methods
+            console.log(name.length); // 8
+            console.log(name.charAt(3)); // i
+        }
+        {
+            let para = "Hello There I am Kanishka and You Guys are Watching K Studio.";
+            console.log(para.includes("Hello")); // true
+            console.log(para.indexOf("I"));
+            // find second occurance of a string
+            console.log(para.indexOf("o", para.indexOf("o")+1)); // 31
+        }
+    </script>
+</body>
+</html>

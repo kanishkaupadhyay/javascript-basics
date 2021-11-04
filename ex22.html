@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 22</title>
+</head>
+<body>
+    <h1>Open Console on your Browser --> CTRL + SHIFT + i</h1>
+    <script>
+        // fill an array by taking user input
+        { 
+            let nums = [];
+            while(true){
+                let input = prompt("Add a Number");
+                if(input === "q" || input === null){  // sentinel value to break out of loop
+                    break;
+                }
+                nums.push(Number(input));
+            }
+            console.log(nums);
+        }
+    </script>
+</body>
+</html>

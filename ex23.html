@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 23</title>
+</head>
+<body>
+    <h1>Open Console on your Browser --> CTRL + SHIFT + i</h1>
+    <script>
+        //Array methods
+        {
+            // like stack LIFO
+            let nums = [1,2,3,5,6,7,8];
+            nums.push(4);
+            let lastValue = nums.pop();
+            console.log(lastValue);
+
+            // like queue FIFO
+            nums.unshift(0);
+            console.log(nums);
+            nums.shift();
+            console.log(nums);
+
+            // splice method
+            let removedNums = nums.splice(3,2);
+            console.log(nums);
+            console.log(removedNums);
+            //add using splice
+            nums.splice(2,0,9,10,11,12);
+            console.log(nums);
+            // sorting array by callback function
+            let unsortedList = [2,4,23,3,54,6,54,23,5,3,6778,78];
+            unsortedList.sort(function(a,b){return a - b});
+            console.log(unsortedList);
+            // reverse
+            unsortedList.reverse();
+            console.log(unsortedList);
+            // nums.fill(fill_num, start_index, end_index);
+
+            let a = [24,56,67];
+            let b = [12,22];
+            // concat returns new array
+            let c = a.concat(b);
+            console.log(c);
+            console.log(c.includes(12)); // true
+            console.log(c.indexOf(24)); // 0
+        }
+    </script>
+</body>
+</html>

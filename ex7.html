@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 7</title>
+</head>
+<body>
+    <h1>Open Console on your Browser</h1>
+    <script>
+        // numbers are 64 bit floating point number
+        {
+            let x = 9007199254740991;
+
+            console.log(Number.MAX_SAFE_INTEGER);
+            console.log(Number.MIN_SAFE_INTEGER); 
+            console.log(Number.isSafeInteger(x));
+            // three special numbers Infinity, -Infinity and NaN(Not a Number)
+            console.log(Math.pow(x, 200)); 
+        }
+    </script>
+</body>
+</html>

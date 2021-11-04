@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 24</title>
+</head>
+<body>
+    <h1>Open Console on your Browser --> CTRL + SHIFT + i</h1>
+    <script>
+        // dates
+        {
+            let currentDate = new Date();
+            console.log(currentDate);
+            // month is zero based
+            let myDate = new Date(2001, 11);
+            console.log(myDate);
+
+            let start = Date.now();
+            let x;
+            for(let i = 0; i < 100000000; i++){
+                x += i;
+            }
+            let stop = Date.now();
+            let totalTimeTaken = stop - start;
+            console.log(totalTimeTaken);
+            
+            // days
+            let before = new Date(2021, 7, 1);
+            let after = new Date(2021, 7, 10);
+
+            let oneDay = 1000 * 60 * 60 * 24;
+
+            let days = (after - before) / oneDay;
+            console.log("Total Days between: " + days);
+        }
+    </script>
+</body>
+</html>

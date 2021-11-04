@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 27</title>
+</head>
+
+<body>
+    <h1>Open Console on your Browser --> CTRL + SHIFT + i</h1>
+    <script>
+        {
+            // functions as first class citizens objects
+            // function are treated just like any other object
+            // we can assign a function to a variable
+            function pow(x, y) {
+                let total = 1;
+                for (let i = 0; i < y; i++) {
+                    total *= x;
+                }
+                return total;
+            }
+            let arrayFunctions = [pow];
+            console.log(arrayFunctions[0](4, 3));
+            // add function in an object 
+            let objFunctions = {
+                power: pow,
+            };
+            console.log(objFunctions.power(3, 3));
+            // assign properties to a function
+            pow.description = "X raised to the power Y";
+            console.log(pow.description);
+            // callback function
+            function callbackEx(callback) {
+                return callback(2, 2);
+            }
+
+            console.log(callbackEx(pow));
+        }
+
+    </script>
+</body>
+
+</html>

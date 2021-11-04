@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 19</title>
+</head>
+<body>
+    <h1>Open Console on your Browser --> CTRL + SHIFT + i</h1>
+    <div id="pattern"></div>
+    <script>
+        // break and continue and nested loops
+        console.log("break statement");
+        {
+            for(let i = 0; i < 10; i++){
+                if (i === 5){
+                    break; // break the entire loop
+                }
+                console.log(i);
+            }
+        }
+        console.log("continue statement");
+        {
+            for(let i = 0; i < 10; i++){
+                if (i === 5){
+                    continue; // skip 5 and continue the loop from 6 onwards
+                }
+                console.log(i);
+            }
+        }
+        console.log("nested loops");
+        {
+            let p = document.getElementById("pattern");
+            for(let i = 1; i < 10; i++){
+                for(let j = i; j > 0; j--){
+                    p.append(j + " ");
+                }   
+                var br = document.createElement('br');
+                p.appendChild(br);
+            }
+        }
+    </script>
+</body>
+</html>

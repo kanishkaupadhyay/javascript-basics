@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 28</title>
+</head>
+
+<body>
+    <script>
+        {
+            // memoization and algorithm optimization
+            // technique to store previous values so to save re-computing the same value over and over
+            pow.prevValues = {};
+            function pow(x, y, ...extra) { // extra can store array of all the extra arguements passed
+                let keyString = x + "^" + y;
+                if (keyString in pow.prevValues) {
+                    console.log("Found!")
+                    return pow.prevValues[keyString];
+                }
+                console.log("Calculating...");
+                let total = 1;
+                for (let i = 0; i < y; i++) {
+                    total *= x;
+                }
+                pow.prevValues[keyString] = total;
+                return total;
+            }
+
+            console.log(pow(2,3));
+            console.log(pow(4,3));
+            console.log(pow(2,3));
+        }
+    </script>
+</body>
+
+</html>

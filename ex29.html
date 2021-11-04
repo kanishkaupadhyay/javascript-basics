@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 29</title>
+</head>
+
+<body>
+    <h1>Open Console on your Browser --> CTRL + SHIFT + i</h1>
+    <script>
+        {
+            // this in javascript
+            // let myObj = {
+            //     name: "Kanishka",
+            //     printName: function () {
+            //         console.log(this);
+            //         console.log(this.name);
+            //     }
+            // }
+
+            let myObj = {
+                name: "Kanishka",
+                printName: printName
+            }
+
+            function printName() {
+                console.log(this);
+            }
+
+            function printNameStrict() {
+                "use strict";
+                console.log(this); // undefined for function call
+            }
+
+
+            myObj.printName(); // method
+            printName(); // function refers to Window object
+            printNameStrict(); // strict mode 
+
+
+            // calling a function as a constructor
+            function Result() {
+                console.log(this);
+                this.marks = 80;
+            }
+
+            let result = new Result(); // constructor
+            console.log(result);
+        }
+    </script>
+</body>
+
+</html>
